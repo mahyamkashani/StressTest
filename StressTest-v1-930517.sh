@@ -10,7 +10,7 @@ function seprator(){
 clear
 # introduction
 seprator
-echo " Stress auto-test"
+echo " Auto-test Stress"
 echo " written by Mahya MKashani"
 echo " Copyright 2014. Mahya Mkashani"
 echo " E-Mail : mahya.mkashani@gmail.com"
@@ -18,7 +18,7 @@ echo " E-Mail : mahya.mkashani@gmail.com"
 seprator
 
 
-echo "First please check Stress tool is installed or not!(your user should are root!) "
+echo "First, please check Stress tool is installed or not!(your user should be root.) "
 
 seprator
 
@@ -33,7 +33,7 @@ do
        echo "Stress test is installed"
        i=1
     else
-       echo "Sorry! Stress test is'nt installed please install it!"
+       echo "Sorry! Stress test is'nt installed, please try again."
 
 read -r -p "Would you Install stress ?(Y/N) " response  
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
@@ -50,7 +50,7 @@ then
     exit
     
 else   
-      echo "you should type y/n or yes/no please type this words!"
+      echo "you must type y/n or yes/no to continue process:"
             
       
 fi
@@ -62,7 +62,7 @@ done
 
  if [ $(dpkg-query -W -f='${Status}' stress 2>/dev/null | grep -c "ok installed") -eq 0   ]
 then
-echo "sorry your system hasnt Stress Test so test will be stopped!"
+echo "sorry, Stress Test is not installed on your system. So test will be stopped!"
 exit
 fi
 # end if for ensure about install Stress package
@@ -75,11 +75,11 @@ do
 
 
 i=0;
-echo " if you first time test your system with StressTest please read description!"
+echo " If this is your first time test that test your system with StressTest, please read description."
 while [ $i -eq 0 ]
 do
 
-read -r -p "Would you like to explain more about stress test ?(Y/N) " describe 
+read -r -p "Would you like to know more about stress test ?(Y/N) " describe 
   
 if [[ $describe =~ ^([yY][eE][sS]|[yY])$ ]]
 then
@@ -87,10 +87,10 @@ then
 
 echo "Stress Test has different options :"
 
-echo "Stress Test has 4 branches: cpu test,memory test,io test,hard disk test  "
-echo "1- cpu test : is spawn N workers spinning on sqrt() function,you should determine timeout after N seconds(or minute,hour,days,year)" 
+echo "Stress Test has 4 branches: cpu test,memory test,io test,hard disk test : "
+echo "1- cpu test : is spawn N workers spinning on sqrt() function,you should determine timeout after N seconds(or minute,hour,days or even years)" 
 echo "range of cpu test with this config : cpu' core i7 3.4Ghz' is 5000 processes, although systems are different each other "
-echo "2- memory test : has options to ensure  memory is healthy ,you should determine that  how many process you need and for each process how many sizes  of memory you need? "
+echo "2- memory test : has options to ensure  memory is healthy ,you should determine that  how many processes you need and for each process how many size of memory you need? "
 echo "memory :test of memory has 3 section,you could choose each one for testing "
 echo "2-1 memory : first test memory is to ensure about healthy by mallocate and free byte of memory nonstop"
 echo "2-2 Stride memory : second test is touching byte of memory when mallocate memory then free it."
@@ -585,7 +585,7 @@ then
 seprator 
 b=1;
 else 
-echo "you should type y/n or yes or no type!"
+echo "you should type y/n or yes or no type."
 seprator
 
 fi
